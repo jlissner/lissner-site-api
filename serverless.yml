@@ -44,6 +44,30 @@ iamRoleStatements:
     Resource: "arn:aws:dynamodb:us-west-2:*:*"
 
 functions:
+  get-users:
+    handler: users.get
+    events:
+      - http:
+          path: users
+          method: get
+          cors: true
+          authorizer: aws_iam
+  create-user:
+    handler: users.create
+    events:
+      - http:
+          path: users
+          method: post
+          cors: true
+          authorizer: aws_iam
+  update-user:
+    handler: users.update
+    events:
+      - http:
+          path: users
+          method: put
+          cors: true
+          authorizer: aws_iam
   get-recipes:
     handler: recipes.get
     events:
@@ -60,7 +84,7 @@ functions:
           method: post
           cors: true
           authorizer: aws_iam
-  update-recipes:
+  update-recipe:
     handler: recipes.update
     events:
       - http:

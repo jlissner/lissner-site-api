@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "aws-sdk": "^2.311.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.4",
     "babel-plugin-source-map-support": "^1.0.0",
@@ -22,6 +21,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "aws-sdk": "^2.311.0",
     "babel-runtime": "^6.26.0",
     "lodash": "^4.17.11",
     "uuid": "^3.3.2"
