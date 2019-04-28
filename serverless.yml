@@ -100,3 +100,11 @@ functions:
           method: get
           cors: true
           authorizer: aws_iam
+  get-quotes:
+    handler: quotes.get
+    events:
+      - http:
+        path: quotes
+        method: get
+        cors: true
+        authorizer: aws_iam
