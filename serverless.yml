@@ -104,7 +104,7 @@ functions:
     handler: quotes.get
     events:
       - http:
-        path: quotes
-        method: get
-        cors: true
-        authorizer: aws_iam
+          path: quotes
+          method: get
+          cors: true
+          authorizer: aws_iam
