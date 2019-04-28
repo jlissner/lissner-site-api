@@ -31,16 +31,22 @@ provider:
   region: us-west-2
 
 # you can add statements to the Lambda function's IAM Role here
+# if you get an access denied after deploying
+# add the below to the role "lissner-site-api-prod-us-west-2-lambdaRole"
+# as part of the "prod-lissner-site-api-lambda" policy
+# {
+#   "Effect": "Allow",
+#   "Action": [
+#       "dynamodb:*"
+#   ],
+#   "Resource": [
+#       "arn:aws:dynamodb:us-west-2:*:*"
+#   ]
+# },
 iamRoleStatements:
   - Effect: "Allow"
     Action:
-      - dynamodb:DescribeTable
-      - dynamodb:Query
-      - dynamodb:Scan
-      - dynamodb:GetItem
-      - dynamodb:PutItem
-      - dynamodb:UpdateItem
-      - dynamodb:DeleteItem
+      - dynamodb:*
     Resource: "arn:aws:dynamodb:us-west-2:*:*"
 
 functions:
