@@ -4,7 +4,8 @@
   "description": "",
   "main": "recipes.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "serverless deploy -v"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +18,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-3": "^6.24.1",
     "serverless-webpack": "^5.2.0",
-    "webpack": "^4.17.2",
+    "webpack": "^4.41.2",
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {

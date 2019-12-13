@@ -67,7 +67,7 @@ export async function update(event, context, callback) {
     Key: {
       Id: data.Id,
     },
-    UpdateExpression: "SET author = :author, description = :description, note = :note, title = :title, cookTime = :cookTime, serves = :serves, ingredients = :ingredients, directions = :directions, tags = :tags, recipeUrl = :recipeUrl",
+    UpdateExpression: "SET author = :author, description = :description, note = :note, title = :title, cookTime = :cookTime, serves = :serves, ingredients = :ingredients, directions = :directions, tags = :tags, recipeUrl = :recipeUrl, comments = :comments",
     ExpressionAttributeValues: {
       ":author": data.author || null,
       ":description": data.description || null,
@@ -79,6 +79,7 @@ export async function update(event, context, callback) {
       ":directions": data.directions || null,
       ":tags": data.tags || null,
       ":recipeUrl": `/${_kebabCase(data.title)}` || null,
+      ":comments": data.comments || null,
     }
   }
 

@@ -1,0 +1,14 @@
+{
+  "name": "lissner-site-api",
+  "version": "1.0.0",
+  "description": "Packaged externals for lissner-site-api",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "source-map-support": "",
+    "babel-runtime": "^6.26.0",
+    "aws-sdk": "^2.311.0",
+    "uuid": "^3.3.2",
+    "lodash": "^4.17.13"
+  }
+}
