@@ -22,7 +22,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "aws-sdk": "^2.311.0",
+    "aws-sdk": "^2.814.0",
     "babel-runtime": "^6.26.0",
     "lodash": "^4.17.13",
     "uuid": "^3.3.2"
